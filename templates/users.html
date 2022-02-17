@@ -16,20 +16,22 @@
             <tr>
                 <th>First Name</th>
                 <th>Last Name</th>
-                <th>Occupation</th>
+                <th>Email</th>
             </tr>
         </thead>
         <tbody>
-            {% for one_user in users %}
+            {% for user in users %}
             <tr>
-                <td>{{one_user.first_name}}</td>
-                <td>{{one_user.last_name}}</td>
-                <td>{{one_user.email}}</td>
+                <td>{{user.first_name}} </td> 
+                <td>{{user.last_name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.created_at}}</td>
+                <td><a href="">Show</a> <a href="">edit</a> <a href="#"> Delete</a></td>
             </tr>
             {%endfor%}
         </tbody>
     </table>
-    <button class="added"><a href="/">Add More</a></button>
+    <button class="added"><a href="/new_user">Add More</a></button>
     </div>
 </body>
 </html>
