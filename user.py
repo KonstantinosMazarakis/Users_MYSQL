@@ -44,6 +44,7 @@ class User:
         results = connectToMySQL('users_schema').query_db(query,data)
         return
 
+#function delete a user from users table targeted by ID
     @classmethod
     def delete_user(cls,data):
         query = "DELETE from users where id = %(id)s;"

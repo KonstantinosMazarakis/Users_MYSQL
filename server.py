@@ -8,6 +8,7 @@ app = Flask(__name__)
 def index():
     return redirect ("/users")
 
+#--------------------------------------------------------
 
 # all users
 @app.route("/users")
@@ -15,6 +16,7 @@ def users():
     users = User.get_all()
     return render_template("users.html", users = users)
 
+#POST from who deletes users from user page ^
 @app.route("/users/delete_post", methods=["POST"])
 def delete_user():
     delete = request.form
