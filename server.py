@@ -19,8 +19,7 @@ def users():
 #POST from who deletes users from user page ^
 @app.route("/users/delete_post", methods=["POST"])
 def delete_user():
-    delete = request.form
-    User.delete_user(delete)
+    User.delete_user(request.form)
     return redirect("/users")
 
 #--------------------------------------------------------
